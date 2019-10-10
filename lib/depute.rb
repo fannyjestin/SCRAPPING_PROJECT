@@ -45,8 +45,19 @@ depute_mail = depute_url.map{|x|
 			}
 #array des noms
 
+depute_info = []
 
-puts depute_mail
+
+depute_name.each_with_index {|value, index| 
+
+	depute_info[index] =Hash.new	              	 
+	depute_info[index][depute_name[index].text]=depute_mail[index].text
+						      }
+
+
+puts depute_info
+
+	return depute_info
 
 end
 
